@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://ragen-ai.github.io",
+    site: "https://llm-tdrm.github.io",
     base: '/',
 });
