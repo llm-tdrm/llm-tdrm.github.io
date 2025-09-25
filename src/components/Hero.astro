@@ -106,14 +106,11 @@
     color: #1a1a1a; 
     line-height: 1.6;
   ">
-    Reward models are central to both reinforcement learning (RL) with language models and inference-time verification. 
-    However, existing reward models often lack temporal consistency, leading to ineffective policy updates and unstable RL training.
-    We introduce TDRM, a method for learning smoother and more reliable reward models by minimizing temporal differences during training. 
-    This temporal-difference (TD) regularization produces smooth rewards and improves alignment with long-term objectives. 
-    Incorporating TDRM into the actor-critic style online RL loop yields consistent empirical gains.
-    It is worth noting that TDRM is a supplement to verifiable reward methods, and both can be used in series.
-    Experiments show that TD-trained process reward models (PRMs) improve performance across Best-of-N (up to 6.6%) and tree-search (up to 23.7%) settings.
-    When combined with verifiable rewards, TDRM-trained PRMs lead to more data-efficient RL---achieving comparable performance with just 2.5k data to what baseline methods require 50.1k data to attain---and yield higher-quality language model policies on 8 model variants (5 series), e.g., Qwen2.5-(0.5B, 1,5B), GLM4-9B-0414, GLM-Z1-9B-0414, Qwen2.5-Math-(1.5B, 7B), and DeepSeek-R1-Distill-Qwen-(1.5B, 7B).
+  Reward models are central to both reinforcement learning (RL) with language models and inference-time verification. 
+  However, existing reward models often lack temporal consistency, leading to ineffective policy updates and unstable RL training.
+  We introduce TDRM, a method for learning smoother and more reliable reward models by minimizing temporal differences (TD) for training-time reinforcement learning and inference-time verification. 
+  Experiments show that TD-trained process reward models (PRMs) improve performance across Best-of-$N$ (up to 6.6\%) and tree-search (up to 23.7\%) settings.
+  When combined with Reinforcement Learning with Verifiable Rewards (RLVR), TD-trained PRMs lead to more data-efficient RL --- achieving comparable performance with just 2.5k data to what baseline methods require 50.1k data to attain --- and yield higher-quality language model policies in 8 model variants (5 series), e.g., Qwen2.5-(0.5B, 1,5B), GLM4-9B-0414, GLM-Z1-9B-0414, Qwen2.5-Math-(1.5B, 7B), and DeepSeek-R1-Distill-Qwen-(1.5B, 7B).
   </p>
 </div>
 
